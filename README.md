@@ -32,7 +32,7 @@ Or follow offical docs.
 https://k6.io/docs/get-started/installation/
 
 
-Make sure you change the username and the password with your instance credentials
+Make sure you change the username and the password with your instance credentials in registeruser.js file.
 
 
 
