@@ -32,11 +32,13 @@ Or follow offical docs.
 https://k6.io/docs/get-started/installation/
 
 
+Make sure you change the username and the password with your instance credentials
+
 
 
 To run the test case Follow this command 
 k6 run --vus "number_of_users_ "time" HOST_URL="url_of_instance"
 
-Like
+Example:
 
 k6 run --vus 20 --duration 20s --env HOST_URL=https://amzad.faveodemo.com registeruser.js
