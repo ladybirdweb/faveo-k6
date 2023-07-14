@@ -35,7 +35,8 @@ https://k6.io/docs/get-started/installation/
 
 
 
-To run the test case Follow this command 
+To run the test case follow this command:-
+
 k6 run --vus "number_of_users_ "time" HOST_URL="url_of_instance" --env EMAIL=your-faveo-instance-email --env PASSWORD=your-faveo_instance-password filename
 
 Example:
