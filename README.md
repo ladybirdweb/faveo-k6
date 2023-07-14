@@ -7,6 +7,7 @@ Before installing k6, make sure you have the following prerequisites:
 
 Operating System: k6 supports Windows, macOS, and Linux.
 Node.js (optional): If you want to use the k6 JavaScript API or run k6 tests using Node.js, install Node.js before proceeding.
+
 Step 2: Download k6 Binary
 Visit the k6 website at https://k6.io and navigate to the "Downloads" section.
 
@@ -32,13 +33,11 @@ Or follow offical docs.
 https://k6.io/docs/get-started/installation/
 
 
-Make sure you change the username and the password with your instance credentials in registeruser.js file.
-
 
 
 To run the test case Follow this command 
-k6 run --vus "number_of_users_ "time" HOST_URL="url_of_instance"
+k6 run --vus "number_of_users_ "time" HOST_URL="url_of_instance" --env EMAIL=your-faveo-instance-email --env PASSWORD=your-faveo_instance-password filename
 
 Example:
 
-k6 run --vus 20 --duration 20s --env HOST_URL=https://amzad.faveodemo.com registeruser.js
+k6 run --env HOST_URL=https://example.com --env EMAIL=your-email --env PASSWORD=your-password script.js
