@@ -2,7 +2,10 @@ import http from 'k6/http';
 import { sleep } from 'k6';
 
 export default function () {
-    const hostUrl = __ENV.HOST_URL; // Retrieve host URL from command-line argument or use a default value
+    const hostUrl = __ENV.HOST_URL; // Retrieve host URL from command-line argument 
+    const email = __ENV.EMAIL; // Retrieve email from command-line argument
+    const password = __ENV.PASSWORD; // Retrieve password from command-line argument
+
     const loginPageUrl = `${hostUrl}/auth/login`;
     const loginApiUrl = `${hostUrl}/api/login`;
     const createUserApiUrl = `${hostUrl}/user/create/api`;
@@ -21,8 +24,8 @@ export default function () {
 
         // Step 2: Perform the login request
         const loginPayload = {
-            email: 'amzadchoudhary36@gmail.com',
-            password: 'Password@1',
+            email: email,
+            password: password,
             _token: csrfToken
         };
 
