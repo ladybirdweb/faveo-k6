@@ -53,14 +53,18 @@ export default function main() {
         function () {
 
             response = http.get(`${hostUrl}/panel/dashboard`)
+            console.log('Dashboard Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/api/get-auth-info`)
+            console.log('api/get-auth-info Response Status Code: ', response.status);
             sleep(1)
 
             response = http.get(
                 `${hostUrl}/custom-js/get-list-of-scripts`)
+            console.log('custom-js/get-list-of-scripts Response Status Code: ', response.status);
             // console.log(`Response body: ${response.body}`);
 
             response = http.get(
@@ -69,111 +73,133 @@ export default function main() {
 
             response = http.get(
                 `${hostUrl}/api/in-app/auth/notifications?page=1`)
+            console.log('api/get-auth-info Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/api/dependency/languages?meta=true`)
+            console.log('api/dependency/languages Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/api/agent/navigation`)
+            console.log('api/agent/navigation Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/api/agent/dashboard-data/dashboard`)
+            console.log('api/agent/dashboard-data/dashboard Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/health/system/alerts`)
+            console.log('health/system/alerts Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/bill/package/get-user-invoice?meta=true&all-users=1&status=0`)
+            console.log(' Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
-            sleep(7.9)
 
             response = http.get(
                 `${hostUrl}/api/agent/dashboard-report/top-widget`)
+            console.log(' Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/api/agent/dashboard-report/require-immediate-action?page=1`)
+            console.log(' Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/api/agent/todo-list?page=1`)
+            console.log(' Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/api/agent/ticket-list?category=inbox`)
+            console.log(' Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/api/agent/navigation`)
-            // console.log(`Response body: ${response.body}`);
+            console.log(' Response Status Code: ', response.status);
 
-            sleep(20)
+            // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/api/form/render/?category=ticket&scenario=create&panel=agent`)
+            console.log(' Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
             sleep(2)
 
             response = http.get(
                 `${hostUrl}/api/dependency/users?meta=true&scenario=create&requester=&cc=&subject=&status_id=&priority_id=&location_id=&source_id=&help_topic_id=&department_id=&type_id=&assigned_id=&description=&asset_ids=&page=1&paginate=1`)
+            console.log('Response Status Code: ', response.status);
+
             // console.log(`Response Users: ${response.body}`);
 
-            sleep(17.7)
 
             response = http.get(
                 `${hostUrl}/api/dependency/statuses?scenario=create&requester=1&cc=&subject=Test+ticket&status_id=&priority_id=&location_id=&source_id=&help_topic_id=&department_id=&type_id=&assigned_id=&description=&asset_ids=&page=1&paginate=1`)
+            console.log('Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
-            sleep(5.5)
 
             response = http.get(
                 `${hostUrl}/api/dependency/priorities?scenario=create&requester=1&cc=&subject=Test+ticket&status_id=1&priority_id=&location_id=&source_id=&help_topic_id=&department_id=&type_id=&assigned_id=&description=&asset_ids=&page=1&paginate=1`)
+            console.log(' Response Status Code: ', response.status);
+
             // console.log(`Response body: ${response.body}`);
 
-            sleep(4.4)
 
             response = http.get(
                 `${hostUrl}/api/dependency/locations?scenario=create&requester=1&cc=&subject=Test+ticket&status_id=1&priority_id=2&location_id=&source_id=&help_topic_id=&department_id=&type_id=&assigned_id=&description=&asset_ids=&page=1&paginate=1`)
-            // console.log(`Response body: ${response.body}`);
+            console.log(' Response Status Code: ', response.status);
 
-            sleep(5.6)
+            // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/api/dependency/sources?scenario=create&requester=1&cc=&subject=Test+ticket&status_id=1&priority_id=2&location_id=2&source_id=&help_topic_id=&department_id=&type_id=&assigned_id=&description=&asset_ids=&page=1&paginate=1`)
-            // console.log(`Response body: ${response.body}`);
+            console.log(' Response Status Code: ', response.status);
 
-            sleep(4.4)
+            // console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/api/dependency/help-topics?meta=true&panel=agent&scenario=create&requester=1&cc=&subject=Test+ticket&status_id=1&priority_id=2&location_id=2&source_id=1&help_topic_id=&department_id=&type_id=&assigned_id=&description=&asset_ids=&page=1&paginate=1`)
             // console.log(`Response body: ${response.body}`);
+            console.log(' Response Status Code: ', response.status);
 
-            sleep(5.8)
 
             response = http.get(
                 `${hostUrl}/api/dependency/departments?meta=true&panel=agent&scenario=create&requester=1&cc=&subject=Test+ticket&status_id=1&priority_id=2&location_id=2&source_id=1&help_topic_id=1&department_id=&type_id=&assigned_id=&description=&asset_ids=&page=1&paginate=1`)
             // console.log(`Response body: ${response.body}`);
-
-            sleep(7.1)
+            console.log(' Response Status Code: ', response.status);
 
             response = http.get(
                 `${hostUrl}/api/dependency/types?scenario=create&requester=1&cc=&subject=Test+ticket&status_id=1&priority_id=2&location_id=2&source_id=1&help_topic_id=1&department_id=1&type_id=&assigned_id=&description=&asset_ids=&page=1&paginate=1`)
             // console.log(`Response body: ${response.body}`);
-
-            sleep(5.3)
+            console.log(' Response Status Code: ', response.status);
 
             response = http.get(
                 `${hostUrl}/api/dependency/agents?meta=true&scenario=create&requester=1&cc=&subject=Test+ticket&status_id=1&priority_id=2&location_id=2&source_id=1&help_topic_id=1&department_id=1&type_id=1&assigned_id=&description=&asset_ids=&page=1&paginate=1`)
             // console.log(`Response body: ${response.body}`);
+            console.log(' Response Status Code: ', response.status);
 
-            sleep(10.5)
             // Step 3: Create a Ticket payload
             const createPayload = {
                 asset_ids: 'agent',
@@ -230,6 +256,8 @@ export default function main() {
                     },
                 }
             )
+            console.log('Ticket Response Status Code: ', response.status);
+
             console.log(`Response Ticket: ${response.body}`);
 
             sleep(1)
@@ -239,15 +267,16 @@ export default function main() {
 
             response = http.get(
                 `${hostUrl}/api/form/render/?category=ticket&scenario=create&panel=agent`)
-            sleep(4.1)
+            console.log('api/form/render Response Status Code: ', response.status);
 
             response = http.get(
                 `${hostUrl}/api/agent/ticket-list?category=inbox`)
+            console.log('api/agent/ticket-list Response Status Code: ', response.status);
+
             console.log(`Response body: ${response.body}`);
 
             response = http.get(
                 `${hostUrl}/api/agent/navigation`)
-            sleep(8.2)
 
             response = http.get(
                 `${hostUrl}/api/rating?ticket_id=1`)
@@ -257,7 +286,6 @@ export default function main() {
 
             response = http.get(
                 `${hostUrl}/api/agent/ticket-details/1`)
-            sleep(1.7)
 
             response = http.get(
                 `${hostUrl}/api/agent/associated-tickets?ticket_id=1&count=1`)
@@ -266,11 +294,9 @@ export default function main() {
                 `${hostUrl}/api/agent/ticket-conversation/1?page=1`)
             // console.log(`Response body: ${response.body}`);
 
-            sleep(4.8)
 
             response = http.get(
                 `${hostUrl}/file-manager/upload-info`)
-            sleep(9.9)
 
             response = http.post(
                 `${hostUrl}/api/thread/reply/1`,
@@ -314,7 +340,6 @@ export default function main() {
 
             response = http.get(
                 `${hostUrl}/api/agent/ticket-conversation/1?page=1`)
-            sleep(9.2)
 
             response = http.get(
                 `${hostUrl}/api/agent/ticket-list?category=inbox`)
@@ -361,7 +386,7 @@ export default function main() {
             )
             console.log(`Response Logout: ${response.body}`);
 
-            sleep(1.1)
+            sleep(1)
         }
     )
 
@@ -369,10 +394,8 @@ export default function main() {
         response = http.get(`${hostUrl}`)
         // console.log(`Response body: ${response.body}`);
 
-        sleep(1.8)
         response = http.get(
             `${hostUrl}/api/get-auth-info`)
-        sleep(1)
         response = http.get(
             `${hostUrl}/custom-js/get-list-of-scripts`)
         response = http.get(
