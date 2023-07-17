@@ -44,3 +44,22 @@ k6 run --vus 20 --duration 20s --env HOST_URL=https://example.com --env EMAIL=yo
 Output metric:-
 ![image](https://github.com/ladybirdweb/faveo-k6/assets/110447324/17562747-892e-45e3-b99f-4d50df83a2da)
 
+Understanding the output of a test case is essential for evaluating the performance and behavior of your application under load. The output provides valuable insights into various metrics and measurements that can help you identify issues, monitor performance, and make informed decisions. Here are some key elements of the output and their purposes:
+
+Data Received and Data Sent: These metrics indicate the amount of data received from the server (inbound) and sent to the server (outbound) during the test. They help you understand the data transfer requirements and the overall load on your network.
+
+HTTP Request Metrics: These metrics provide details about the requests sent to the server, including their duration, success rate, failure rate, and timings. They help you evaluate the performance of individual requests and identify any issues or bottlenecks.
+
+HTTP Request Blocked, Connecting, Duration, Waiting: These metrics focus on the different stages of an HTTP request's lifecycle, such as blocking, connection establishment, duration, and waiting time. They help you pinpoint where delays or timeouts may occur, providing insights into the performance of your server and network.
+
+HTTP Request Failed: This metric indicates the failure rate of HTTP requests. A high failure rate may suggest issues with the server, network, or the application itself. Investigating the failed requests can help identify the root cause of failures and take appropriate corrective actions.
+
+Iterations and VUs: These metrics provide information about the number of iterations (test iterations executed) and virtual users (simulated users) during the test. They help you understand the load applied to the system and evaluate its performance under different user loads.
+
+Iteration Duration: This metric indicates the average duration of each test iteration. It helps you evaluate the overall test duration and the time taken for each iteration to complete. Deviations in iteration duration can indicate performance issues or inconsistencies.
+
+VUs Max: This metric represents the maximum number of virtual users used during the test. It helps you understand the scalability and capacity of your system by determining the maximum load it can handle.
+
+By analyzing and interpreting these metrics, you can gain insights into the performance, scalability, and reliability of your application. You can identify bottlenecks, performance issues, and areas for improvement. These insights can guide you in optimizing your application, making infrastructure adjustments, or identifying areas that require further investigation.
+
+It's important to establish performance benchmarks and compare the test results against those benchmarks to understand the impact of changes or improvements over time. Regular monitoring and analysis of test outputs help ensure your application meets the required performance goals and can handle the expected user load effectively.
