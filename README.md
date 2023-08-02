@@ -71,3 +71,30 @@ It is important to establish performance benchmarks and compare test results aga
 ![Output Metrics](https://github.com/ladybirdweb/faveo-k6/assets/110447324/17562747-892e-45e3-b99f-4d50df83a2da)
 
 For more information and in-depth analysis of the test output, refer to the documentation and resources provided by K6.
+
+
+I have covered the following test cases:
+
+1. `script.js`:
+   - Scenarios related to calling the API of form renderer.
+
+2. `login.js`:
+   - Scenarios related to the login process.
+   - API to get the login page and then login the user.
+
+3. `createticket.js`:
+   - Scenarios related to ticket creation and management.
+   - API to get the login page and then login the user.
+   - API calls for dashboard loading.
+   - API calls for ticket creation form renderer, including dependencies.
+   - API calls for creating a new ticket and listing tickets.
+   - API calls for opening a specific ticket, replying to it, and related actions.
+   - Logout API.
+
+4. `registeruser.js`:
+   - Scenarios related to user registration.
+   - API to get the login page and then login the user.
+   - API call for user creation form renderer.
+   - API call to register a new user.
+
+The test cases to cover the login, ticket creation, ticket management, user registration, and form rendering functionalities.
